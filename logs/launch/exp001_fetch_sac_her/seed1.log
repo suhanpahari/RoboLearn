@@ -1,8 +1,8 @@
-2026-05-21 15:54:31.818350: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-05-21 17:46:46.953669: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
-[2026-05-21 15:54:33,034][__main__][INFO] - Experiment: exp001_sac_her_fetch_push | seed=1
-[2026-05-21 15:54:33,039][__main__][INFO] - Resolved config:
+[2026-05-21 17:46:48,064][__main__][INFO] - Experiment: exp001_sac_her_fetch_push | seed=1
+[2026-05-21 17:46:48,070][__main__][INFO] - Resolved config:
 seed: 1
 project: roborto
 experiment_name: exp001_sac_her_fetch_push
@@ -48,14 +48,33 @@ encoder:
   frozen: false
   embed_dim: 512
 
-[2026-05-21 15:54:33,041][roborto.utils.device][INFO] - CUDA_VISIBLE_DEVICES=MIG-80f109f6-aa75-51f9-9909-42ad8029df93
+[2026-05-21 17:46:48,071][roborto.utils.device][INFO] - CUDA_VISIBLE_DEVICES=GPU-5ac08ef4-9737-c367-bf80-200f205f6014
 wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/user1/.netrc.
 wandb: Currently logged in as: sohampahari-research (sohampahari-research-valeo) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run 46w109am
+wandb: setting up run 6n2ta00d
 wandb: Tracking run with wandb version 0.27.0
-wandb: Run data is saved locally in /media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/wandb/run-20260521_155434-46w109am
+wandb: Run data is saved locally in /media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/wandb/run-20260521_174649-6n2ta00d
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run exp001_sac_her_fetch_push/seed1
 wandb: ⭐️ View project at https://wandb.ai/sohampahari-research-valeo/roborto
-wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/46w109am
-[2026-05-21 15:54:40,094][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/6n2ta00d
+[2026-05-21 17:46:54,425][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+[2026-05-21 17:51:31,539][roborto.training.trainer][INFO] - step=25000  {'eval/success_rate': 0.06, 'eval/mean_return': -46.85}
+[2026-05-21 17:56:22,370][roborto.training.trainer][INFO] - step=50000  {'eval/success_rate': 0.07, 'eval/mean_return': -46.44}
+[2026-05-21 18:01:11,461][roborto.training.trainer][INFO] - step=75000  {'eval/success_rate': 0.05, 'eval/mean_return': -47.48}
+[2026-05-21 18:06:04,210][roborto.training.trainer][INFO] - step=100000  {'eval/success_rate': 0.09, 'eval/mean_return': -45.44}
+[2026-05-21 18:10:54,504][roborto.training.trainer][INFO] - step=125000  {'eval/success_rate': 0.1, 'eval/mean_return': -45.68}
+[2026-05-21 18:15:46,887][roborto.training.trainer][INFO] - step=150000  {'eval/success_rate': 0.1, 'eval/mean_return': -45.27}
+[2026-05-21 18:20:40,423][roborto.training.trainer][INFO] - step=175000  {'eval/success_rate': 0.14, 'eval/mean_return': -43.94}
+[2026-05-21 18:25:33,134][roborto.training.trainer][INFO] - step=200000  {'eval/success_rate': 0.36, 'eval/mean_return': -37.5}
+[2026-05-21 18:30:28,920][roborto.training.trainer][INFO] - step=225000  {'eval/success_rate': 0.56, 'eval/mean_return': -29.23}
+[2026-05-21 18:35:26,852][roborto.training.trainer][INFO] - step=250000  {'eval/success_rate': 0.55, 'eval/mean_return': -30.91}
+[2026-05-21 18:40:24,293][roborto.training.trainer][INFO] - step=275000  {'eval/success_rate': 0.48, 'eval/mean_return': -32.51}
+[2026-05-21 18:45:22,884][roborto.training.trainer][INFO] - step=300000  {'eval/success_rate': 0.59, 'eval/mean_return': -26.22}
+[2026-05-21 18:50:21,936][roborto.training.trainer][INFO] - step=325000  {'eval/success_rate': 0.66, 'eval/mean_return': -26.64}
+[2026-05-21 18:55:24,782][roborto.training.trainer][INFO] - step=350000  {'eval/success_rate': 0.68, 'eval/mean_return': -25.16}
+[2026-05-21 19:00:28,298][roborto.training.trainer][INFO] - step=375000  {'eval/success_rate': 0.75, 'eval/mean_return': -24.28}
+[2026-05-21 19:05:31,516][roborto.training.trainer][INFO] - step=400000  {'eval/success_rate': 0.8, 'eval/mean_return': -21.25}
+[2026-05-21 19:10:36,630][roborto.training.trainer][INFO] - step=425000  {'eval/success_rate': 0.92, 'eval/mean_return': -15.97}
+[2026-05-21 19:15:45,886][roborto.training.trainer][INFO] - step=450000  {'eval/success_rate': 0.97, 'eval/mean_return': -12.84}
+[2026-05-21 19:20:53,485][roborto.training.trainer][INFO] - step=475000  {'eval/success_rate': 0.9, 'eval/mean_return': -18.06}

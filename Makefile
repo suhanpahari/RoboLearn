@@ -1,5 +1,5 @@
 # Roborto - common commands. See docs/PLAN.md.
-.PHONY: help setup-gym setup-hab lint format test smoke train launch eval sweep figures clean
+.PHONY: help setup-gym setup-hab lint format test smoke train launch run-all eval sweep figures clean
 
 SHELL := /bin/bash
 PYTHON ?= python
@@ -37,6 +37,10 @@ train:  ## Full training run. Usage: make train EXP=expNNN GPU=GPU-xxxx
 launch:  ## Launch seeds pooled across GPUs. Usage: make launch EXP=expNNN GPUS=u1,u2,... [SEEDS=0,1,2,...]
 	@test -n "$(GPUS)" || { echo "ERROR: set GPUS=uuid1,uuid2,... (find idle ones: nvidia-smi -L)"; exit 1; }
 	$(PYTHON) scripts/launch_seeds.py experiment=$(EXP) gpus=$(GPUS) $(if $(SEEDS),seeds=$(SEEDS),)
+
+run-all:  ## Run all manipulation experiments in sequence. Usage: make run-all GPU=GPU-xxxx [SEEDS=0,1,...,7]
+	@test -n "$(GPU)" || { echo "ERROR: set GPU=<uuid> (find an idle one: nvidia-smi -L)"; exit 1; }
+	$(PYTHON) scripts/run_all_exps.py gpu=$(GPU) $(if $(SEEDS),seeds=$(SEEDS),)
 
 eval:  ## Evaluate a run. Usage: make eval EXP=expNNN GPU=GPU-xxxx
 	@test -n "$(GPU)" || { echo "ERROR: set GPU=<uuid> (find an idle one: nvidia-smi -L)"; exit 1; }

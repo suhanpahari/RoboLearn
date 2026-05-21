@@ -59,3 +59,94 @@ wandb: Syncing run exp001_sac_her_fetch_push/seed3
 wandb: ⭐️ View project at https://wandb.ai/sohampahari-research-valeo/roborto
 wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/ch7o0r8n
 [2026-05-21 15:54:39,492][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading summary
+wandb: 
+wandb: Run summary:
+wandb: git_sha cc51370
+wandb: 
+wandb: 🚀 View run exp001_sac_her_fetch_push/seed3 at: https://wandb.ai/sohampahari-research-valeo/roborto/runs/ch7o0r8n
+wandb: ⭐️ View project at: https://wandb.ai/sohampahari-research-valeo/roborto
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260521_155434-ch7o0r8n/logs
+Traceback (most recent call last):
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 42, in <module>
+    main()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 36, in main
+    trainer.fit()
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/roborto/training/trainer.py", line 92, in fit
+    model.learn(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 313, in learn
+    return super().learn(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 354, in learn
+    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 287, in train
+    self.actor.optimizer.step()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 223, in step
+    adam(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 784, in adam
+    func(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 524, in _multi_tensor_adam
+    torch._foreach_add_(
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 42, in <module>
+    main()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 36, in main
+    trainer.fit()
+  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/roborto/training/trainer.py", line 92, in fit
+    model.learn(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 313, in learn
+    return super().learn(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 354, in learn
+    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 287, in train
+    self.actor.optimizer.step()
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 223, in step
+    adam(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 784, in adam
+    func(
+  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 524, in _multi_tensor_adam
+    torch._foreach_add_(
+KeyboardInterrupt
