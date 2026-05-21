@@ -1,0 +1,7 @@
+name: FetchReach
+family: manipulation
+suite: gymnasium_robotics
+id: FetchReach-v4            
+goal_conditioned: true
+reward_type: sparse          # sparse | dense
+max_episode_steps: 50

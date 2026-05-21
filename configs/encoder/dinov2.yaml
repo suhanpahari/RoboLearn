@@ -1,0 +1,4 @@
+name: dinov2
+frozen: true
+model_id: dinov2_vitb14      # TODO: confirm checkpoint at implementation time
+embed_dim: 768

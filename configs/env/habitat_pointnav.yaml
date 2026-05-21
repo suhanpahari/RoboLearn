@@ -1,0 +1,9 @@
+name: HabitatPointNav
+family: navigation
+suite: habitat
+task: pointnav
+scene_dataset: hm3d          # hm3d | mp3d | gibson  (gated — see docs/setup.md)
+sensors: [rgb, depth]
+success_distance: 0.2
+max_episode_steps: 500
+# habitat-lab task config is resolved in roborto/envs/habitat/make.py

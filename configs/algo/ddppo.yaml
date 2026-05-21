@@ -1,0 +1,8 @@
+name: ddppo
+family: navigation
+backend: habitat_lab
+clip_param: 0.2
+ppo_epoch: 2
+num_steps: 128
+lr: 0.00025
+num_environments: 16         # single-GPU by default on the shared box (PLAN.md 2.1)

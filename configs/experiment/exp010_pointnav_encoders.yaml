@@ -1,0 +1,11 @@
+# @package _global_
+# Phase 3 - frozen-encoder comparison on Habitat PointNav (Spine A navigation track).
+defaults:
+  - override /env: habitat_pointnav
+  - override /algo: ddppo
+  - override /encoder: dinov2
+
+experiment_name: exp010_pointnav_${encoder.name}
+trainer:
+  total_steps: 50000000
+  num_seeds: 3

@@ -1,0 +1,8 @@
+name: HabitatImageNav
+family: navigation
+suite: habitat
+task: imagenav
+scene_dataset: hm3d
+sensors: [rgb]
+success_distance: 1.0
+max_episode_steps: 1000

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Hydra run dirs
+outputs/
+multirun/
+.hydra/
+
+# Experiment artifacts - W&B is the source of truth
+results/
+wandb/
+*.ckpt
+*.pth
+
+# Gated datasets - large, never committed (see docs/setup.md)
+data/
+
+# OS
+.DS_Store

@@ -1,0 +1,16 @@
+# Habitat environment. Create with: make setup-hab
+# Kept separate from roborto-gym on purpose - the dependency stacks conflict.
+# Verify the currently supported Python version and the correct habitat-sim
+# build against the official Habitat install docs before relying on these pins.
+name: roborto-hab
+channels:
+  - aihabitat
+  - conda-forge
+dependencies:
+  - python=3.9
+  - habitat-sim          # see docs/setup.md for the headless / withbullet variant
+  - pip
+  - pip:
+      - habitat-lab
+      - -e .[analysis,dev]
+      - wandb

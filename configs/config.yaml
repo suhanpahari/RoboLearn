@@ -1,0 +1,31 @@
+# Roborto base config. Compose a named experiment with:  experiment=<name>
+# Every hyperparameter lives in a config file — nothing is hardcoded in Python.
+defaults:
+  - _self_
+  - env: fetch_reach
+  - algo: sac
+  - encoder: scratch
+  - experiment: null          # overridden by `experiment=expNNN_...`
+
+seed: 0
+project: roborto
+experiment_name: ${algo.name}_on_${env.name}
+
+paths:
+  data_dir: ${oc.env:ROBORTO_DATA,data}
+  results_dir: results
+  run_dir: ${paths.results_dir}/${experiment_name}/seed_${seed}
+
+logging:
+  backend: wandb              # wandb | offline
+  wandb_project: roborto
+  wandb_entity: null
+  log_interval: 1000
+
+trainer:
+  total_steps: 1000000
+  eval_interval: 25000
+  eval_episodes: 50
+  num_seeds: 5
+  smoke: false                # `make smoke` sets this true for a tiny end-to-end run
+  resume: true                # always resumable — shared, unscheduled GPU box

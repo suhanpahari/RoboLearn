@@ -1,0 +1,24 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install (light deps only)
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check roborto scripts tests
+          ruff format --check roborto scripts tests
+      - name: Test
+        run: pytest -q tests
+# Gymnasium-Robotics (MuJoCo) and Habitat are NOT installed in CI - their stacks
+# are heavy and platform-specific. Environment smoke tests run locally via
+# `make smoke`. See docs/PLAN.md.

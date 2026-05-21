@@ -1,0 +1,4 @@
+name: r3m
+frozen: true
+model_id: r3m_resnet50       # TODO: confirm checkpoint at implementation time
+embed_dim: 2048

@@ -1,0 +1,10 @@
+# Manipulation environment. Create with: make setup-gym
+name: roborto-gym
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -e .[gym,analysis,dev]
+      - wandb

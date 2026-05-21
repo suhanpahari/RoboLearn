@@ -1,0 +1,3 @@
+name: scratch
+frozen: false                # the control: a CNN trained jointly with the policy
+embed_dim: 512

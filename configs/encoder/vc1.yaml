@@ -1,0 +1,4 @@
+name: vc1
+frozen: true
+model_id: vc1_vitb           # TODO: confirm checkpoint at implementation time
+embed_dim: 768

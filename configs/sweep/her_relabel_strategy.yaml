@@ -1,0 +1,6 @@
+# HER relabeling-strategy sweep on Fetch (exp001 follow-up, manipulation contribution).
+# Run:  python scripts/sweep.py sweep=her_relabel_strategy
+base_experiment: exp001_fetch_sac_her
+axes:
+  algo.her.strategy: [final, future, episode, random]
+  seed: [0, 1, 2, 3, 4]

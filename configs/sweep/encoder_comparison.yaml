@@ -1,0 +1,6 @@
+# Frozen-encoder comparison sweep on Habitat PointNav (navigation contribution).
+# Run:  python scripts/sweep.py sweep=encoder_comparison
+base_experiment: exp010_pointnav_encoders
+axes:
+  encoder: [scratch, resnet_imagenet, clip, dinov2, vc1, r3m]
+  seed: [0, 1, 2]

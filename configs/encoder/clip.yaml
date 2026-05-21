@@ -1,0 +1,4 @@
+name: clip
+frozen: true
+model_id: ViT-B/32           # TODO: confirm checkpoint at implementation time
+embed_dim: 512

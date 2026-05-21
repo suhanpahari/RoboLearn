@@ -1,0 +1,4 @@
+name: resnet_imagenet
+frozen: true
+model_id: resnet50           # TODO: confirm checkpoint at implementation time
+embed_dim: 2048

@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roborto"
+version = "0.0.1"
+description = "Reproducible research playground for embodied RL across manipulation and navigation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "hydra-core>=1.3",
+    "omegaconf>=2.3",
+]
+
+[project.optional-dependencies]
+# Manipulation stack (installed in the roborto-gym conda env).
+gym = [
+    "gymnasium>=1.0",
+    "gymnasium-robotics>=1.2",
+    "mujoco>=3.1",
+    "stable-baselines3>=2.3",
+    "sb3-contrib>=2.3",
+    "torch",
+]
+# Analysis / reporting.
+analysis = ["rliable", "matplotlib", "pandas", "seaborn"]
+# Developer tooling (also what CI installs).
+dev = ["pytest", "ruff", "pre-commit"]
+# NOTE: Habitat is installed via conda (environment-habitat.yml), not pip.
+
+[tool.setuptools.packages.find]
+include = ["roborto*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]  # line length is handled by the formatter
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

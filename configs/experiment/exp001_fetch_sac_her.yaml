@@ -1,0 +1,11 @@
+# @package _global_
+# Phase 1 - reproduce SAC+HER on Fetch. Design note: docs/experiments/exp001_fetch_sac_her.md
+defaults:
+  - override /env: fetch_push
+  - override /algo: her
+
+experiment_name: exp001_sac_her_fetch_push
+trainer:
+  total_steps: 500000
+  eval_episodes: 100
+  num_seeds: 8
