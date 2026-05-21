@@ -78,3 +78,23 @@ wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs
 [2026-05-21 19:10:36,630][roborto.training.trainer][INFO] - step=425000  {'eval/success_rate': 0.92, 'eval/mean_return': -15.97}
 [2026-05-21 19:15:45,886][roborto.training.trainer][INFO] - step=450000  {'eval/success_rate': 0.97, 'eval/mean_return': -12.84}
 [2026-05-21 19:20:53,485][roborto.training.trainer][INFO] - step=475000  {'eval/success_rate': 0.9, 'eval/mean_return': -18.06}
+[2026-05-21 19:26:02,402][roborto.training.trainer][INFO] - step=500000  {'eval/success_rate': 0.91, 'eval/mean_return': -16.22}
+[2026-05-21 19:26:02,426][roborto.training.trainer][INFO] - Training complete at step 500000.
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading config.yaml
+wandb: uploading history steps 18-19, summary, console lines 20-21
+wandb: 
+wandb: Run history:
+wandb:  eval/mean_return ▁▁▁▁▁▁▂▃▅▄▄▅▅▆▆▆▇█▇▇
+wandb: eval/success_rate ▁▁▁▁▁▁▂▃▅▅▄▅▆▆▆▇██▇█
+wandb: 
+wandb: Run summary:
+wandb:  eval/mean_return -16.22
+wandb: eval/success_rate 0.91
+wandb:           git_sha 70ebf5c
+wandb: 
+wandb: 🚀 View run exp001_sac_her_fetch_push/seed1 at: https://wandb.ai/sohampahari-research-valeo/roborto/runs/6n2ta00d
+wandb: ⭐️ View project at: https://wandb.ai/sohampahari-research-valeo/roborto
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260521_174649-6n2ta00d/logs
