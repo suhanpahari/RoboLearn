@@ -1,0 +1,61 @@
+2026-05-21 15:54:31.755949: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
+[2026-05-21 15:54:32,864][__main__][INFO] - Experiment: exp001_sac_her_fetch_push | seed=0
+[2026-05-21 15:54:32,869][__main__][INFO] - Resolved config:
+seed: 0
+project: roborto
+experiment_name: exp001_sac_her_fetch_push
+paths:
+  data_dir: data
+  results_dir: results
+  run_dir: results/exp001_sac_her_fetch_push/seed_0
+logging:
+  backend: wandb
+  wandb_project: roborto
+  wandb_entity: null
+  log_interval: 1000
+trainer:
+  total_steps: 500000
+  eval_interval: 25000
+  eval_episodes: 100
+  num_seeds: 8
+  smoke: false
+  resume: true
+env:
+  name: FetchPush
+  family: manipulation
+  suite: gymnasium_robotics
+  id: FetchPush-v4
+  goal_conditioned: true
+  reward_type: sparse
+  max_episode_steps: 50
+algo:
+  name: sac_her
+  family: manipulation
+  backend: stable_baselines3
+  gamma: 0.98
+  learning_rate: 0.001
+  batch_size: 256
+  buffer_size: 1000000
+  tau: 0.005
+  learning_starts: 1000
+  her:
+    strategy: future
+    n_relabel: 4
+encoder:
+  name: scratch
+  frozen: false
+  embed_dim: 512
+
+[2026-05-21 15:54:32,871][roborto.utils.device][INFO] - CUDA_VISIBLE_DEVICES=MIG-e6b94c71-1db7-5ad2-a95a-9de8bd50bb1a
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/user1/.netrc.
+wandb: Currently logged in as: sohampahari-research (sohampahari-research-valeo) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run ca6fgjhd
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/wandb/run-20260521_155434-ca6fgjhd
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run exp001_sac_her_fetch_push/seed0
+wandb: ⭐️ View project at https://wandb.ai/sohampahari-research-valeo/roborto
+wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/ca6fgjhd
+[2026-05-21 15:54:39,785][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False

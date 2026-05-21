@@ -34,9 +34,9 @@ train:  ## Full training run. Usage: make train EXP=expNNN GPU=GPU-xxxx
 	@test -n "$(GPU)" || { echo "ERROR: set GPU=<uuid> (find an idle one: nvidia-smi -L)"; exit 1; }
 	CUDA_VISIBLE_DEVICES=$(GPU) $(PYTHON) scripts/train.py experiment=$(EXP)
 
-launch:  ## Launch all seeds in parallel. Usage: make launch EXP=expNNN GPUS=GPU-aa,GPU-bb,...
-	@test -n "$(GPUS)" || { echo "ERROR: set GPUS=uuid1,uuid2,... (one per seed, find idle ones: nvidia-smi -L)"; exit 1; }
-	$(PYTHON) scripts/launch_seeds.py experiment=$(EXP) gpus=$(GPUS)
+launch:  ## Launch seeds pooled across GPUs. Usage: make launch EXP=expNNN GPUS=u1,u2,... [SEEDS=0,1,2,...]
+	@test -n "$(GPUS)" || { echo "ERROR: set GPUS=uuid1,uuid2,... (find idle ones: nvidia-smi -L)"; exit 1; }
+	$(PYTHON) scripts/launch_seeds.py experiment=$(EXP) gpus=$(GPUS) $(if $(SEEDS),seeds=$(SEEDS),)
 
 eval:  ## Evaluate a run. Usage: make eval EXP=expNNN GPU=GPU-xxxx
 	@test -n "$(GPU)" || { echo "ERROR: set GPU=<uuid> (find an idle one: nvidia-smi -L)"; exit 1; }
