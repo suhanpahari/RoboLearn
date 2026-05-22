@@ -1,0 +1,12 @@
+# @package _global_
+# Phase 1 - SAC+HER sanity check on FetchReach (easiest task, expect ~100%).
+# Design note: docs/experiments/exp005_fetch_reach.md
+defaults:
+  - override /env: fetch_reach
+  - override /algo: her
+
+experiment_name: exp005_sac_her_fetch_reach
+trainer:
+  total_steps: 200000
+  eval_episodes: 100
+  num_seeds: 5

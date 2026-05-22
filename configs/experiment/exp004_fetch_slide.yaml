@@ -1,0 +1,12 @@
+# @package _global_
+# Phase 1 - SAC+HER baseline on FetchSlide (hardest Fetch task).
+# Design note: docs/experiments/exp004_fetch_slide.md
+defaults:
+  - override /env: fetch_slide
+  - override /algo: her
+
+experiment_name: exp004_sac_her_fetch_slide
+trainer:
+  total_steps: 1000000
+  eval_episodes: 100
+  num_seeds: 8

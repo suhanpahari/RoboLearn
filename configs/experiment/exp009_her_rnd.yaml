@@ -1,0 +1,21 @@
+# @package _global_
+# Phase 1 contribution - HER + RND exploration bonus on FetchPickAndPlace.
+# Design note: docs/experiments/exp009_her_rnd.md
+# NOTE: requires RND bonus implementation in roborto/algos/ before running.
+defaults:
+  - override /env: fetch_pick_and_place
+  - override /algo: her
+
+experiment_name: exp009_her_rnd_fetch_pick_and_place
+algo:
+  her:
+    strategy: future
+    n_relabel: 4
+  rnd:
+    enabled: true
+    bonus_scale: 0.01     # intrinsic reward weight — tune via smoke run first
+    lr: 0.001
+trainer:
+  total_steps: 1000000
+  eval_episodes: 100
+  num_seeds: 5

@@ -1,8 +1,8 @@
-2026-05-21 15:54:31.784716: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-05-21 21:05:43.084481: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 AdroitHandRelocateDense-v1, AdroitHandHammerDense-v1, AdroitHandDoorDense-v1 environment's reward functions were updated in v1.2.1 without an environment version update. Therefore, use gymnasium-robotics==1.2.0 for v1 reproducibility or use v2 in gymnasium-robotics>=1.4.3. See https://github.com/Farama-Foundation/Gymnasium-Robotics/pull/220 for more details
-[2026-05-21 15:54:32,982][__main__][INFO] - Experiment: exp001_sac_her_fetch_push | seed=3
-[2026-05-21 15:54:32,987][__main__][INFO] - Resolved config:
+[2026-05-21 21:05:44,195][__main__][INFO] - Experiment: exp001_sac_her_fetch_push | seed=3
+[2026-05-21 21:05:44,200][__main__][INFO] - Resolved config:
 seed: 3
 project: roborto
 experiment_name: exp001_sac_her_fetch_push
@@ -48,105 +48,52 @@ encoder:
   frozen: false
   embed_dim: 512
 
-[2026-05-21 15:54:32,989][roborto.utils.device][INFO] - CUDA_VISIBLE_DEVICES=MIG-51c93f85-6919-5785-8f23-031ab153a183
+[2026-05-21 21:05:44,201][roborto.utils.device][INFO] - CUDA_VISIBLE_DEVICES=GPU-5ac08ef4-9737-c367-bf80-200f205f6014
 wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/user1/.netrc.
 wandb: Currently logged in as: sohampahari-research (sohampahari-research-valeo) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
-wandb: setting up run ch7o0r8n
+wandb: setting up run jkuk7scn
 wandb: Tracking run with wandb version 0.27.0
-wandb: Run data is saved locally in /media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/wandb/run-20260521_155434-ch7o0r8n
+wandb: Run data is saved locally in /media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/wandb/run-20260521_210545-jkuk7scn
 wandb: Run `wandb offline` to turn off syncing.
 wandb: Syncing run exp001_sac_her_fetch_push/seed3
 wandb: ⭐️ View project at https://wandb.ai/sohampahari-research-valeo/roborto
-wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/ch7o0r8n
-[2026-05-21 15:54:39,492][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/jkuk7scn
+[2026-05-21 21:05:51,206][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+[2026-05-21 21:10:32,452][roborto.training.trainer][INFO] - step=25000  {'eval/success_rate': 0.03, 'eval/mean_return': -48.5}
+[2026-05-21 21:15:25,487][roborto.training.trainer][INFO] - step=50000  {'eval/success_rate': 0.04, 'eval/mean_return': -47.99}
+[2026-05-21 21:20:19,859][roborto.training.trainer][INFO] - step=75000  {'eval/success_rate': 0.09, 'eval/mean_return': -45.5}
+[2026-05-21 21:25:13,932][roborto.training.trainer][INFO] - step=100000  {'eval/success_rate': 0.05, 'eval/mean_return': -47.5}
+[2026-05-21 21:30:07,332][roborto.training.trainer][INFO] - step=125000  {'eval/success_rate': 0.06, 'eval/mean_return': -47.0}
+[2026-05-21 21:35:02,374][roborto.training.trainer][INFO] - step=150000  {'eval/success_rate': 0.07, 'eval/mean_return': -46.25}
+[2026-05-21 21:40:00,289][roborto.training.trainer][INFO] - step=175000  {'eval/success_rate': 0.07, 'eval/mean_return': -46.53}
+[2026-05-21 21:45:02,462][roborto.training.trainer][INFO] - step=200000  {'eval/success_rate': 0.27, 'eval/mean_return': -39.34}
+[2026-05-21 21:50:07,525][roborto.training.trainer][INFO] - step=225000  {'eval/success_rate': 0.27, 'eval/mean_return': -39.01}
+[2026-05-21 21:55:09,591][roborto.training.trainer][INFO] - step=250000  {'eval/success_rate': 0.5, 'eval/mean_return': -33.29}
+[2026-05-21 22:00:12,542][roborto.training.trainer][INFO] - step=275000  {'eval/success_rate': 0.63, 'eval/mean_return': -25.19}
+[2026-05-21 22:05:17,498][roborto.training.trainer][INFO] - step=300000  {'eval/success_rate': 0.76, 'eval/mean_return': -22.0}
+[2026-05-21 22:10:24,455][roborto.training.trainer][INFO] - step=325000  {'eval/success_rate': 0.86, 'eval/mean_return': -19.01}
+[2026-05-21 22:15:29,354][roborto.training.trainer][INFO] - step=350000  {'eval/success_rate': 0.92, 'eval/mean_return': -16.68}
+[2026-05-21 22:20:35,395][roborto.training.trainer][INFO] - step=375000  {'eval/success_rate': 0.73, 'eval/mean_return': -21.23}
+[2026-05-21 22:25:42,572][roborto.training.trainer][INFO] - step=400000  {'eval/success_rate': 0.86, 'eval/mean_return': -17.66}
+[2026-05-21 22:30:51,322][roborto.training.trainer][INFO] - step=425000  {'eval/success_rate': 0.86, 'eval/mean_return': -17.59}
+[2026-05-21 22:36:00,958][roborto.training.trainer][INFO] - step=450000  {'eval/success_rate': 0.9, 'eval/mean_return': -15.73}
+[2026-05-21 22:41:14,102][roborto.training.trainer][INFO] - step=475000  {'eval/success_rate': 0.92, 'eval/mean_return': -13.39}
+[2026-05-21 22:46:27,154][roborto.training.trainer][INFO] - step=500000  {'eval/success_rate': 0.87, 'eval/mean_return': -16.37}
+[2026-05-21 22:46:27,178][roborto.training.trainer][INFO] - Training complete at step 500000.
 wandb: updating run metadata
 wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
-wandb: uploading summary
+wandb: uploading history steps 18-19, summary, console lines 20-21
+wandb: 
+wandb: Run history:
+wandb:  eval/mean_return ▁▁▂▁▁▁▁▃▃▄▆▆▇▇▆▇▇██▇
+wandb: eval/success_rate ▁▁▁▁▁▁▁▃▃▅▆▇██▇█████
 wandb: 
 wandb: Run summary:
-wandb: git_sha cc51370
+wandb:  eval/mean_return -16.37
+wandb: eval/success_rate 0.87
+wandb:           git_sha 980f8b2
 wandb: 
-wandb: 🚀 View run exp001_sac_her_fetch_push/seed3 at: https://wandb.ai/sohampahari-research-valeo/roborto/runs/ch7o0r8n
+wandb: 🚀 View run exp001_sac_her_fetch_push/seed3 at: https://wandb.ai/sohampahari-research-valeo/roborto/runs/jkuk7scn
 wandb: ⭐️ View project at: https://wandb.ai/sohampahari-research-valeo/roborto
 wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20260521_155434-ch7o0r8n/logs
-Traceback (most recent call last):
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 42, in <module>
-    main()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
-    _run_hydra(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
-    _run_app(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
-    run_and_report(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
-    return func()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
-    lambda: hydra.run(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
-    ret = run_job(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
-    ret.return_value = task_function(task_cfg)
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 36, in main
-    trainer.fit()
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/roborto/training/trainer.py", line 92, in fit
-    model.learn(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 313, in learn
-    return super().learn(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 354, in learn
-    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 287, in train
-    self.actor.optimizer.step()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
-    out = func(*args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
-    ret = func(self, *args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 223, in step
-    adam(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
-    return func(*args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 784, in adam
-    func(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 524, in _multi_tensor_adam
-    torch._foreach_add_(
-KeyboardInterrupt
-Traceback (most recent call last):
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 42, in <module>
-    main()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
-    _run_hydra(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
-    _run_app(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
-    run_and_report(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
-    return func()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
-    lambda: hydra.run(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
-    ret = run_job(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
-    ret.return_value = task_function(task_cfg)
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/scripts/train.py", line 36, in main
-    trainer.fit()
-  File "/media/bigdata/71ec9ff9-bdc2-410a-bfcb-1a3e24aaf8f7/soham/quantamrobolearning/Roborto_repo_scaffold/roborto/roborto/training/trainer.py", line 92, in fit
-    model.learn(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 313, in learn
-    return super().learn(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 354, in learn
-    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/stable_baselines3/sac/sac.py", line 287, in train
-    self.actor.optimizer.step()
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
-    out = func(*args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
-    ret = func(self, *args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 223, in step
-    adam(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
-    return func(*args, **kwargs)
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 784, in adam
-    func(
-  File "/home/user1/.conda/envs/robo/lib/python3.10/site-packages/torch/optim/adam.py", line 524, in _multi_tensor_adam
-    torch._foreach_add_(
-KeyboardInterrupt
+wandb: Find logs at: ./wandb/run-20260521_210545-jkuk7scn/logs

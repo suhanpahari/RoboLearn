@@ -1,0 +1,12 @@
+# @package _global_
+# Phase 1 - SAC+HER baseline on FetchPickAndPlace (harder task).
+# Design note: docs/experiments/exp003_fetch_pick_and_place.md
+defaults:
+  - override /env: fetch_pick_and_place
+  - override /algo: her
+
+experiment_name: exp003_sac_her_fetch_pick_and_place
+trainer:
+  total_steps: 1000000
+  eval_episodes: 100
+  num_seeds: 8

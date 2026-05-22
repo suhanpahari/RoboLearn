@@ -1,0 +1,7 @@
+name: FetchSlide
+family: manipulation
+suite: gymnasium_robotics
+id: FetchSlide-v4
+goal_conditioned: true
+reward_type: sparse
+max_episode_steps: 50

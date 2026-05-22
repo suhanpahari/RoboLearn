@@ -1,0 +1,16 @@
+# @package _global_
+# Phase 1 ablation - HER k (n_relabel) sensitivity on FetchPush.
+# Design note: docs/experiments/exp006_her_k_ablation.md
+# Sweep: run with algo.her.n_relabel=1,2,4,8,16 via scripts/sweep.py
+defaults:
+  - override /env: fetch_push
+  - override /algo: her
+
+experiment_name: exp006_her_k${algo.her.n_relabel}_fetch_push
+algo:
+  her:
+    n_relabel: 4          # override per run: 1, 2, 4, 8, 16
+trainer:
+  total_steps: 500000
+  eval_episodes: 100
+  num_seeds: 5

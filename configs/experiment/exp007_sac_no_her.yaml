@@ -1,0 +1,12 @@
+# @package _global_
+# Phase 1 ablation - SAC without HER on FetchPush (lower bound / HER necessity check).
+# Design note: docs/experiments/exp007_sac_no_her.md
+defaults:
+  - override /env: fetch_push
+  - override /algo: sac     # plain SAC, no HER replay buffer
+
+experiment_name: exp007_sac_no_her_fetch_push
+trainer:
+  total_steps: 500000
+  eval_episodes: 100
+  num_seeds: 5

@@ -1,0 +1,17 @@
+# @package _global_
+# Phase 1 novel contribution - difficulty-aware future-goal sampling.
+# Design note: docs/experiments/exp008_her_difficulty_aware.md
+# NOTE: requires roborto/buffers/her.py to implement 'difficulty_aware' strategy first.
+defaults:
+  - override /env: fetch_pick_and_place
+  - override /algo: her
+
+experiment_name: exp008_her_difficulty_aware_fetch_pick_and_place
+algo:
+  her:
+    strategy: difficulty_aware   # not yet in STRATEGIES — implement before running
+    n_relabel: 4
+trainer:
+  total_steps: 1000000
+  eval_episodes: 100
+  num_seeds: 8

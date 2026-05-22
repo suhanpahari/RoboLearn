@@ -59,3 +59,41 @@ wandb: Syncing run exp001_sac_her_fetch_push/seed2
 wandb: ⭐️ View project at https://wandb.ai/sohampahari-research-valeo/roborto
 wandb: 🚀 View run at https://wandb.ai/sohampahari-research-valeo/roborto/runs/eq1cjzwy
 [2026-05-21 19:26:18,701][roborto.training.trainer][INFO] - SACHERTrainer: FetchPush-v4 | total_steps=500000 smoke=False
+[2026-05-21 19:30:49,750][roborto.training.trainer][INFO] - step=25000  {'eval/success_rate': 0.08, 'eval/mean_return': -46.0}
+[2026-05-21 19:35:37,563][roborto.training.trainer][INFO] - step=50000  {'eval/success_rate': 0.03, 'eval/mean_return': -48.09}
+[2026-05-21 19:40:30,672][roborto.training.trainer][INFO] - step=75000  {'eval/success_rate': 0.05, 'eval/mean_return': -47.65}
+[2026-05-21 19:45:23,582][roborto.training.trainer][INFO] - step=100000  {'eval/success_rate': 0.09, 'eval/mean_return': -45.65}
+[2026-05-21 19:50:17,563][roborto.training.trainer][INFO] - step=125000  {'eval/success_rate': 0.07, 'eval/mean_return': -46.72}
+[2026-05-21 19:55:11,360][roborto.training.trainer][INFO] - step=150000  {'eval/success_rate': 0.06, 'eval/mean_return': -47.11}
+[2026-05-21 20:00:06,005][roborto.training.trainer][INFO] - step=175000  {'eval/success_rate': 0.08, 'eval/mean_return': -46.29}
+[2026-05-21 20:05:00,129][roborto.training.trainer][INFO] - step=200000  {'eval/success_rate': 0.23, 'eval/mean_return': -40.72}
+[2026-05-21 20:09:54,634][roborto.training.trainer][INFO] - step=225000  {'eval/success_rate': 0.19, 'eval/mean_return': -42.97}
+[2026-05-21 20:14:51,823][roborto.training.trainer][INFO] - step=250000  {'eval/success_rate': 0.33, 'eval/mean_return': -38.24}
+[2026-05-21 20:19:49,875][roborto.training.trainer][INFO] - step=275000  {'eval/success_rate': 0.51, 'eval/mean_return': -31.92}
+[2026-05-21 20:24:52,408][roborto.training.trainer][INFO] - step=300000  {'eval/success_rate': 0.4, 'eval/mean_return': -35.19}
+[2026-05-21 20:29:55,882][roborto.training.trainer][INFO] - step=325000  {'eval/success_rate': 0.55, 'eval/mean_return': -29.11}
+[2026-05-21 20:35:00,148][roborto.training.trainer][INFO] - step=350000  {'eval/success_rate': 0.69, 'eval/mean_return': -25.89}
+[2026-05-21 20:40:01,740][roborto.training.trainer][INFO] - step=375000  {'eval/success_rate': 0.75, 'eval/mean_return': -24.17}
+[2026-05-21 20:45:05,496][roborto.training.trainer][INFO] - step=400000  {'eval/success_rate': 0.89, 'eval/mean_return': -16.68}
+[2026-05-21 20:50:12,105][roborto.training.trainer][INFO] - step=425000  {'eval/success_rate': 0.85, 'eval/mean_return': -19.48}
+[2026-05-21 20:55:20,845][roborto.training.trainer][INFO] - step=450000  {'eval/success_rate': 0.85, 'eval/mean_return': -17.42}
+[2026-05-21 21:00:28,891][roborto.training.trainer][INFO] - step=475000  {'eval/success_rate': 0.83, 'eval/mean_return': -20.25}
+[2026-05-21 21:05:36,252][roborto.training.trainer][INFO] - step=500000  {'eval/success_rate': 0.83, 'eval/mean_return': -19.07}
+[2026-05-21 21:05:36,274][roborto.training.trainer][INFO] - Training complete at step 500000.
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading history steps 18-19, summary, console lines 20-21
+wandb: 
+wandb: Run history:
+wandb:  eval/mean_return ▁▁▁▂▁▁▁▃▂▃▅▄▅▆▆█▇█▇▇
+wandb: eval/success_rate ▁▁▁▁▁▁▁▃▂▃▅▄▅▆▇█████
+wandb: 
+wandb: Run summary:
+wandb:  eval/mean_return -19.07
+wandb: eval/success_rate 0.83
+wandb:           git_sha 99d5459
+wandb: 
+wandb: 🚀 View run exp001_sac_her_fetch_push/seed2 at: https://wandb.ai/sohampahari-research-valeo/roborto/runs/eq1cjzwy
+wandb: ⭐️ View project at: https://wandb.ai/sohampahari-research-valeo/roborto
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260521_192613-eq1cjzwy/logs

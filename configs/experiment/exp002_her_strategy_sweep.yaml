@@ -1,0 +1,13 @@
+# @package _global_
+# Phase 1 contribution - HER relabeling strategy comparison on FetchPush.
+# Design note: docs/experiments/exp002_her_strategy_sweep.md
+# Run the sweep: python scripts/sweep.py sweep=her_relabel_strategy
+defaults:
+  - override /env: fetch_push
+  - override /algo: her
+
+experiment_name: exp002_her_strategy_${algo.her.strategy}
+trainer:
+  total_steps: 500000
+  eval_episodes: 100
+  num_seeds: 5
